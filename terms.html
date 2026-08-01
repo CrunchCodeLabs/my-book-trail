@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Terms of Service — My Book Trail</title>
+<meta name="description" content="Terms of Service for the My Book Trail mobile application.">
+<style>
+  :root {
+    --bg: #F6FAF2;
+    --card: #FDFEFB;
+    --text: #1B231A;
+    --muted: #4A5544;
+    --primary: #3B6B3F;
+    --on-primary: #F3F8EF;
+    --primary-container: #D2E4CB;
+    --on-primary-container: #16301A;
+    --accent: #8F4F31;
+    --accent-soft: #F4E1D5;
+    --border: #D3DECA;
+    --shadow: 0 1px 2px rgba(20,40,20,.05), 0 8px 28px -12px rgba(20,50,25,.18);
+    --radius: 16px;
+    --maxw: 1080px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0E140C; --card: #161D13; --text: #DFE6D7; --muted: #AEBBA2;
+      --primary: #9FCB98; --on-primary: #0F2812; --primary-container: #294A2D; --on-primary-container: #BBE0B3;
+      --accent: #E0A483; --accent-soft: #3A2517; --border: #313B2A;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 10px 30px -14px rgba(0,0,0,.55);
+    }
+  }
+  :root[data-theme="dark"] {
+      --bg: #0E140C; --card: #161D13; --text: #DFE6D7; --muted: #AEBBA2;
+      --primary: #9FCB98; --on-primary: #0F2812; --primary-container: #294A2D; --on-primary-container: #BBE0B3;
+      --accent: #E0A483; --accent-soft: #3A2517; --border: #313B2A;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 10px 30px -14px rgba(0,0,0,.55);
+  }
+  :root[data-theme="light"] {
+    --bg: #F6FAF2; --card: #FDFEFB; --text: #1B231A; --muted: #4A5544;
+    --primary: #3B6B3F; --on-primary: #F3F8EF; --primary-container: #D2E4CB; --on-primary-container: #16301A;
+    --accent: #8F4F31; --accent-soft: #F4E1D5; --border: #D3DECA;
+    --shadow: 0 1px 2px rgba(20,40,20,.05), 0 8px 28px -12px rgba(20,50,25,.18);
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background:
+      radial-gradient(1200px 500px at 100% -10%, color-mix(in srgb, var(--primary) 12%, transparent), transparent 60%),
+      var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.7; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+  }
+  .serif { font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, "Times New Roman", serif; }
+
+  header.hero {
+    background:
+      radial-gradient(900px 400px at 85% -40%, color-mix(in srgb, var(--accent) 40%, var(--primary)), transparent 70%),
+      linear-gradient(155deg, var(--primary), color-mix(in srgb, var(--primary) 72%, #000));
+    color: var(--on-primary); padding: 56px 24px 92px; position: relative; overflow: hidden;
+  }
+  header.hero::after {
+    content: ""; position: absolute; inset: 0;
+    background-image: radial-gradient(circle, rgba(255,255,255,.14) 1.5px, transparent 1.6px);
+    background-size: 26px 26px;
+    -webkit-mask-image: linear-gradient(120deg, transparent 55%, #000 120%);
+            mask-image: linear-gradient(120deg, transparent 55%, #000 120%);
+    opacity: .5; pointer-events: none;
+  }
+  .hero-inner { max-width: var(--maxw); margin: 0 auto; position: relative; z-index: 1; display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
+  .app-icon { width: 84px; height: 84px; border-radius: 21px; box-shadow: 0 10px 30px -8px rgba(0,0,0,.5), inset 0 0 0 1px rgba(255,255,255,.25); flex: 0 0 auto; }
+  .hero-text h1 { margin: 0; font-size: clamp(1.9rem, 4.5vw, 2.9rem); letter-spacing: -.01em; font-weight: 600; }
+  .hero-text .kicker { margin: 0 0 6px; text-transform: uppercase; letter-spacing: .18em; font-size: .72rem; font-weight: 700; opacity: .85; }
+  .hero-text .sub { margin: 8px 0 0; font-size: 1.05rem; opacity: .92; max-width: 46ch; }
+  .badges { max-width: var(--maxw); margin: 22px auto 0; position: relative; z-index: 1; display: flex; gap: 10px; flex-wrap: wrap; }
+  .badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.28); color: var(--on-primary); padding: 7px 13px; border-radius: 999px; font-size: .84rem; font-weight: 500; backdrop-filter: blur(4px); }
+  .badge svg { width: 15px; height: 15px; }
+
+  .wrap { max-width: var(--maxw); margin: -56px auto 0; padding: 0 24px 64px; position: relative; z-index: 2; display: grid; grid-template-columns: 244px minmax(0, 1fr); gap: 28px; align-items: start; }
+
+  nav.toc { position: sticky; top: 20px; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 16px; box-shadow: var(--shadow); }
+  nav.toc h2 { margin: 4px 8px 12px; font-size: .74rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+  nav.toc ol { list-style: none; margin: 0; padding: 0; counter-reset: t; }
+  nav.toc li { counter-increment: t; }
+  nav.toc a { display: flex; gap: 10px; align-items: baseline; padding: 7px 10px; border-radius: 9px; color: var(--muted); text-decoration: none; font-size: .9rem; line-height: 1.35; transition: background .15s, color .15s; }
+  nav.toc a::before { content: counter(t, decimal-leading-zero); font-variant-numeric: tabular-nums; font-size: .72rem; font-weight: 700; color: var(--primary); opacity: .75; flex: 0 0 auto; }
+  nav.toc a:hover { background: var(--primary-container); color: var(--on-primary-container); }
+  nav.toc a.active { background: var(--primary-container); color: var(--on-primary-container); font-weight: 600; }
+  nav.toc a.active::before { opacity: 1; }
+
+  main { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); padding: 12px clamp(20px, 4vw, 44px) 40px; min-width: 0; }
+  .intro { color: var(--muted); font-size: 1.02rem; padding-top: 22px; }
+  .intro strong { color: var(--text); }
+
+  section.policy { scroll-margin-top: 20px; padding: 26px 0; border-top: 1px solid var(--border); }
+  section.policy:first-of-type { border-top: none; }
+  section.policy h2 { display: flex; align-items: center; gap: 12px; margin: 0 0 12px; font-size: 1.4rem; font-weight: 600; letter-spacing: -.01em; }
+  section.policy h2 .num { flex: 0 0 auto; width: 30px; height: 30px; border-radius: 9px; display: grid; place-items: center; background: var(--primary-container); color: var(--on-primary-container); font-size: .82rem; font-weight: 700; font-variant-numeric: tabular-nums; font-family: system-ui, sans-serif; }
+  section.policy p { margin: 0 0 12px; }
+  a.link { color: var(--accent); text-decoration: none; border-bottom: 1px solid color-mix(in srgb, var(--accent) 40%, transparent); }
+  a.link:hover { border-bottom-color: var(--accent); }
+
+  ul.clean { margin: 6px 0 14px; padding: 0; list-style: none; }
+  ul.clean li { position: relative; padding: 6px 0 6px 26px; color: var(--muted); }
+  ul.clean li strong { color: var(--text); }
+  ul.clean li::before { content: ""; position: absolute; left: 4px; top: 15px; width: 7px; height: 7px; border-radius: 2px; background: var(--accent); transform: rotate(45deg); }
+
+  .callout { display: flex; gap: 14px; background: linear-gradient(180deg, color-mix(in srgb, var(--primary-container) 55%, var(--card)), var(--card)); border: 1px solid var(--border); border-left: 4px solid var(--primary); border-radius: 12px; padding: 16px 18px; margin: 14px 0; }
+  .callout.accent { border-left-color: var(--accent); background: linear-gradient(180deg, color-mix(in srgb, var(--accent-soft) 65%, var(--card)), var(--card)); }
+  .callout .ico { flex: 0 0 auto; width: 22px; height: 22px; color: var(--primary); }
+  .callout.accent .ico { color: var(--accent); }
+  .callout p { margin: 0; }
+  .callout .ico svg { width: 22px; height: 22px; }
+
+  .contact { margin-top: 12px; background: linear-gradient(135deg, var(--primary), color-mix(in srgb, var(--primary) 70%, #000)); color: var(--on-primary); border-radius: 14px; padding: 24px 22px; display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
+  .contact h3 { margin: 0 0 4px; color: var(--on-primary); font-size: 1.15rem; }
+  .contact p { margin: 0; opacity: .9; }
+  .contact a.btn { display: inline-flex; align-items: center; gap: 8px; background: var(--on-primary); color: var(--primary); padding: 11px 18px; border-radius: 999px; text-decoration: none; font-weight: 700; font-size: .95rem; white-space: nowrap; }
+  .contact a.btn svg { width: 17px; height: 17px; }
+
+  footer { max-width: var(--maxw); margin: 0 auto; padding: 8px 24px 56px; color: var(--muted); font-size: .85rem; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+  footer a { color: var(--muted); }
+  .eff { display: inline-block; margin: 16px 0 4px; font-size: .82rem; color: var(--muted); }
+
+  .theme-toggle { position: absolute; top: 20px; right: 24px; z-index: 3; background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.3); color: var(--on-primary); border-radius: 999px; padding: 8px 14px; font: inherit; font-size: .82rem; cursor: pointer; display: inline-flex; gap: 7px; align-items: center; backdrop-filter: blur(4px); }
+  .theme-toggle:hover { background: rgba(255,255,255,.26); }
+  .theme-toggle svg { width: 15px; height: 15px; }
+
+  @media (max-width: 860px) { .wrap { grid-template-columns: 1fr; } nav.toc { position: static; order: -1; } nav.toc ol { columns: 2; column-gap: 8px; } nav.toc li { break-inside: avoid; } }
+  @media (max-width: 520px) { header.hero { padding: 40px 20px 80px; } nav.toc ol { columns: 1; } .contact { flex-direction: column; align-items: flex-start; } }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark theme">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v2M12 19v2M5 5l1.4 1.4M17.6 17.6L19 19M3 12h2M19 12h2M5 19l1.4-1.4M17.6 6.4L19 5"/><circle cx="12" cy="12" r="4"/></svg>
+    <span id="themeLabel">Theme</span>
+  </button>
+  <div class="hero-inner">
+    <svg class="app-icon" viewBox="0 0 108 108" xmlns="http://www.w3.org/2000/svg" aria-label="My Book Trail icon">
+      <rect width="108" height="108" fill="#1EB8AC"/><circle cx="54" cy="54" r="46" fill="#2CC4B7"/>
+      <g transform="translate(16.2 16.2) scale(0.7)" fill="none">
+        <path d="M42,56L48,56L48,70L42,70Z" fill="#D2A24A"/><path d="M51,46L57,46L57,70L51,70Z" fill="#D2A24A"/>
+        <path d="M60,38L66,38L66,70L60,70Z" fill="#D2A24A"/>
+        <path d="M54,72C42,66 28,67 19,72L19,82C28,77 42,76 54,82Z" fill="#F3F8EF"/>
+        <path d="M54,72C66,66 80,67 89,72L89,82C80,77 66,76 54,82Z" fill="#E7EFDD"/>
+        <circle cx="32" cy="60" r="1.8" fill="#F3F8EF"/><circle cx="39" cy="49" r="1.8" fill="#F3F8EF"/><circle cx="45" cy="40" r="1.8" fill="#F3F8EF"/><circle cx="51" cy="35" r="1.8" fill="#F3F8EF"/><circle cx="58" cy="32" r="1.8" fill="#F3F8EF"/><circle cx="64" cy="32" r="1.8" fill="#F3F8EF"/><circle cx="70" cy="35" r="1.8" fill="#F3F8EF"/>
+        <path d="M74,38L74,28" stroke="#F3F8EF" stroke-width="2.2" stroke-linecap="round"/><path d="M74,28L84,31L74,35Z" fill="#C0704B"/>
+      </g>
+    </svg>
+    <div class="hero-text">
+      <p class="kicker">My Book Trail</p>
+      <h1 class="serif">Terms of Service</h1>
+      <p class="sub">The terms that govern your use of the My Book Trail application.</p>
+    </div>
+  </div>
+  <div class="badges">
+    <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Free app · Android</span>
+    <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 2v4M16 2v4M3 10h18"/></svg> Effective 1 August 2026</span>
+    <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v12H5.2L4 17.2z"/></svg> crunchcodelabs@gmail.com</span>
+  </div>
+</header>
+
+<div class="wrap">
+  <nav class="toc" aria-label="Table of contents">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#acceptance">Acceptance of Terms</a></li>
+      <li><a href="#licence">Licence to Use the App</a></li>
+      <li><a href="#your-content">Your Content &amp; Data</a></li>
+      <li><a href="#acceptable-use">Acceptable Use</a></li>
+      <li><a href="#third-party">Third-Party Services</a></li>
+      <li><a href="#ads">Advertisements</a></li>
+      <li><a href="#ip">Intellectual Property</a></li>
+      <li><a href="#disclaimer">Disclaimer of Warranties</a></li>
+      <li><a href="#liability">Limitation of Liability</a></li>
+      <li><a href="#availability">Availability &amp; Updates</a></li>
+      <li><a href="#termination">Termination</a></li>
+      <li><a href="#law">Governing Law</a></li>
+      <li><a href="#changes">Changes to These Terms</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ol>
+  </nav>
+
+  <main>
+    <p class="intro">
+      These Terms of Service (&ldquo;Terms&rdquo;) govern your use of the <strong>My Book Trail</strong> mobile
+      application and any related services (collectively, the &ldquo;Application&rdquo;), provided by
+      <strong>Anjana Senanayake</strong> (the &ldquo;Service Provider&rdquo;). Please read them carefully.
+    </p>
+    <span class="eff">Effective date: 1 August 2026</span>
+
+    <section class="policy" id="acceptance">
+      <h2><span class="num">01</span> Acceptance of Terms</h2>
+      <p>By downloading, installing, or using the Application, you confirm that you have read, understood, and agree to be bound by these Terms and by our <a class="link" href="privacy-policy.html">Privacy Policy</a>. If you do not agree, please do not download or use the Application.</p>
+    </section>
+
+    <section class="policy" id="licence">
+      <h2><span class="num">02</span> Licence to Use the App</h2>
+      <p>The Service Provider grants you a personal, limited, non-exclusive, non-transferable, revocable licence to download and use the Application on devices you own or control, for your personal, non-commercial use, in accordance with these Terms and the rules of the app store from which you obtained it.</p>
+    </section>
+
+    <section class="policy" id="your-content">
+      <h2><span class="num">03</span> Your Content &amp; Data</h2>
+      <p>You retain ownership of the content you create in the Application, including your book records, notes, ratings, shelves, labels, and cover images (&ldquo;Your Content&rdquo;). The Application stores Your Content on your device and, only if you enable sync, in your own Google Drive account.</p>
+      <p>The Service Provider does not claim ownership of Your Content and does not store it on its own servers. You are responsible for Your Content and for keeping your own backups. For details on how data is handled, see the <a class="link" href="privacy-policy.html">Privacy Policy</a>.</p>
+    </section>
+
+    <section class="policy" id="acceptable-use">
+      <h2><span class="num">04</span> Acceptable Use</h2>
+      <p>When using the Application, you agree not to:</p>
+      <ul class="clean">
+        <li>Reverse engineer, decompile, or disassemble the Application, except to the extent permitted by applicable law</li>
+        <li>Use the Application for any unlawful, harmful, or fraudulent purpose</li>
+        <li>Interfere with, disrupt, or attempt to gain unauthorized access to the Application or related systems</li>
+        <li>Copy, resell, sublicense, or redistribute the Application</li>
+        <li>Use the Application to infringe the intellectual property or other rights of any third party</li>
+      </ul>
+    </section>
+
+    <section class="policy" id="third-party">
+      <h2><span class="num">05</span> Third-Party Services</h2>
+      <p>The Application relies on third-party services, each governed by its own terms and privacy policies. These include Google Play services, the Google Books API, Google Drive and Google Sign-In, Google AdMob, and Meta Audience Network. Your use of features that depend on these services is subject to the respective providers&rsquo; terms, and the Service Provider is not responsible for third-party services or content.</p>
+    </section>
+
+    <section class="policy" id="ads">
+      <h2><span class="num">06</span> Advertisements</h2>
+      <p>The Application is provided free of charge and is supported by advertisements served through third-party ad networks. These networks may use device identifiers to deliver and measure advertisements, subject to their own policies and to your consent where required by law.</p>
+    </section>
+
+    <section class="policy" id="ip">
+      <h2><span class="num">07</span> Intellectual Property</h2>
+      <p>The Application, including its name, logo, design, text, graphics, and software, is owned by the Service Provider and is protected by applicable intellectual property laws. Except for the limited licence granted above, these Terms do not transfer any rights to you, and you may not use the Service Provider&rsquo;s trademarks or branding without prior written permission.</p>
+    </section>
+
+    <section class="policy" id="disclaimer">
+      <h2><span class="num">08</span> Disclaimer of Warranties</h2>
+      <p>The Application is provided on an &ldquo;as is&rdquo; and &ldquo;as available&rdquo; basis, without warranties of any kind, whether express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, accuracy, or non-infringement. The Service Provider does not warrant that the Application will be uninterrupted, timely, secure, error-free, or that any data will never be lost.</p>
+      <div class="callout accent">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg></span>
+        <p>Please keep your own backups of important data. Enabling Google Drive sync is recommended, but you remain responsible for safeguarding Your Content.</p>
+      </div>
+    </section>
+
+    <section class="policy" id="liability">
+      <h2><span class="num">09</span> Limitation of Liability</h2>
+      <p>To the maximum extent permitted by applicable law, the Service Provider shall not be liable for any indirect, incidental, special, consequential, or exemplary damages, or for any loss of data, profits, or goodwill, arising out of or in connection with your use of, or inability to use, the Application. Nothing in these Terms excludes or limits liability that cannot be excluded or limited under applicable law.</p>
+    </section>
+
+    <section class="policy" id="availability">
+      <h2><span class="num">10</span> Availability &amp; Updates</h2>
+      <p>The Service Provider may modify, update, suspend, or discontinue the Application or any of its features at any time, with or without notice. Some features depend on your device, operating system, internet connection, and third-party services, and may not always be available.</p>
+    </section>
+
+    <section class="policy" id="termination">
+      <h2><span class="num">11</span> Termination</h2>
+      <p>These Terms apply until terminated. Your licence ends automatically if you fail to comply with them. You may end it at any time by uninstalling the Application. Provisions that by their nature should survive termination — including intellectual property, disclaimers, and limitation of liability — will continue to apply.</p>
+    </section>
+
+    <section class="policy" id="law">
+      <h2><span class="num">12</span> Governing Law</h2>
+      <p>These Terms are governed by and construed in accordance with the laws of <strong>[your country / jurisdiction]</strong>, without regard to its conflict-of-law principles. You agree to the exclusive jurisdiction of the courts located there for any dispute arising out of or relating to these Terms or the Application.</p>
+      <div class="callout">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 21h14M6 8l6-3 6 3M4 8h16l-2 6H6z"/></svg></span>
+        <p><strong>Before publishing:</strong> replace &ldquo;[your country / jurisdiction]&rdquo; with the country whose laws should apply (usually where you, the developer, are based).</p>
+      </div>
+    </section>
+
+    <section class="policy" id="changes">
+      <h2><span class="num">13</span> Changes to These Terms</h2>
+      <p>The Service Provider may update these Terms from time to time. Material changes will be posted here with an updated effective date. Your continued use of the Application after changes take effect constitutes acceptance of the revised Terms.</p>
+    </section>
+
+    <section class="policy" id="contact">
+      <h2><span class="num">14</span> Contact Us</h2>
+      <p>If you have any questions about these Terms, please contact the Service Provider by email.</p>
+      <div class="contact">
+        <div>
+          <h3>Anjana Senanayake &middot; Service Provider</h3>
+          <p>We aim to respond to enquiries in a reasonable time.</p>
+        </div>
+        <a class="btn" href="mailto:crunchcodelabs@gmail.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          crunchcodelabs@gmail.com
+        </a>
+      </div>
+    </section>
+  </main>
+</div>
+
+<footer>
+  <span>&copy; 2026 Anjana Senanayake &middot; My Book Trail</span>
+  <span><a href="privacy-policy.html">Privacy Policy</a> &middot; Terms of Service &middot; Effective 1 August 2026</span>
+</footer>
+
+<script>
+  (function () {
+    var root = document.documentElement;
+    var btn = document.getElementById('themeToggle');
+    var label = document.getElementById('themeLabel');
+    function apply(mode) {
+      if (mode === 'light' || mode === 'dark') { root.setAttribute('data-theme', mode); }
+      else { root.removeAttribute('data-theme'); }
+      var isDark = mode === 'dark' || (mode !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      label.textContent = isDark ? 'Light' : 'Dark';
+    }
+    var stored = null;
+    try { stored = sessionStorage.getItem('mbt-theme'); } catch (e) {}
+    apply(stored || 'auto');
+    btn.addEventListener('click', function () {
+      var isDark = root.getAttribute('data-theme') === 'dark' ||
+        (!root.getAttribute('data-theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      var next = isDark ? 'light' : 'dark';
+      apply(next);
+      try { sessionStorage.setItem('mbt-theme', next); } catch (e) {}
+    });
+  })();
+
+  (function () {
+    var links = Array.prototype.slice.call(document.querySelectorAll('nav.toc a'));
+    var map = {};
+    links.forEach(function (a) { map[a.getAttribute('href').slice(1)] = a; });
+    var sections = Array.prototype.slice.call(document.querySelectorAll('section.policy'));
+    if (!('IntersectionObserver' in window)) return;
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) {
+          links.forEach(function (l) { l.classList.remove('active'); });
+          var active = map[en.target.id];
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-15% 0px -70% 0px', threshold: 0 });
+    sections.forEach(function (s) { obs.observe(s); });
+  })();
+</script>
+</body>
+</html>
