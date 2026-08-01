@@ -4,9 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- ▼▼▼ STEP 1: paste your Google Search Console verification tag on the next line ▼▼▼ -->
-  <meta name="google-site-verification" content="PASTE_YOUR_VERIFICATION_TOKEN_HERE" />
-  <!-- ▲▲▲ (Search Console → Add property → URL prefix → HTML tag → copy the tag here) ▲▲▲ -->
+  <meta name="google-site-verification" content="la3AytcUZjDvX9lUVv-xeRIOO8Y2Z5Q6oDwt-YrqrPY" />
 
   <title>My Book Trail — Personal reading tracker for Android</title>
   <meta name="description" content="My Book Trail is a personal reading tracker for Android: catalogue every book you've read, are reading, or want to read, with covers, ratings, shelves, stats, reading goals, and private Google Drive backup." />
@@ -20,8 +18,8 @@
     body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
       color:var(--ink);background:var(--page);line-height:1.6}
     .wrap{max-width:900px;margin:0 auto;padding:0 22px}
+    .wide{max-width:1120px;margin:0 auto;padding:0 22px}
     a{color:#1d6a6e}
-    /* hero */
     header.hero{background:linear-gradient(150deg,#154023,#0e2f19 70%,#0a2413);color:var(--cream);padding:64px 0 56px}
     .hero .row{display:flex;align-items:center;gap:26px;flex-wrap:wrap}
     .icon{width:104px;height:104px;border-radius:24px;box-shadow:0 12px 30px rgba(0,0,0,.35);flex:0 0 auto}
@@ -30,15 +28,17 @@
     .badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
     .badge{font-size:13px;font-weight:600;color:#08351f;background:color-mix(in srgb,var(--gold) 90%,white);
       padding:7px 14px;border-radius:999px}
-    /* sections */
     main{padding:48px 0 20px}
-    section{margin-bottom:44px}
+    section{margin-bottom:52px}
     h2{font-size:24px;font-weight:800;letter-spacing:-.01em;margin-bottom:12px}
     p{color:var(--muted);max-width:68ch}
-    .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:20px}
-    .card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px}
-    .card h3{font-size:16px;margin-bottom:6px}
-    .card p{font-size:14.5px}
+    .sub{color:var(--muted);margin:0 0 20px;max-width:68ch}
+    /* screenshot gallery */
+    .shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:22px}
+    .shots figure{margin:0}
+    .shots img{width:100%;height:auto;display:block;border-radius:16px;border:1px solid var(--line);
+      box-shadow:0 12px 34px rgba(4,42,41,.20)}
+    @media (max-width:520px){ .shots{grid-template-columns:1fr} }
     .links{display:flex;gap:14px;flex-wrap:wrap;margin-top:8px}
     .btn{display:inline-block;font-weight:600;text-decoration:none;padding:11px 18px;border-radius:11px}
     .btn.primary{background:var(--green);color:#fff}
@@ -47,14 +47,13 @@
     footer a{color:inherit}
     @media (prefers-color-scheme:dark){
       :root{--ink:#e7efed;--muted:#a9b8b5;--line:#243230;--page:#0c1211}
-      .card{background:#141c1b}.btn.ghost{background:#141c1b}
+      .btn.ghost{background:#141c1b}
     }
   </style>
 </head>
 <body>
   <header class="hero">
     <div class="wrap row">
-      <!-- app icon -->
       <svg class="icon" viewBox="0 0 108 108" xmlns="http://www.w3.org/2000/svg" aria-label="My Book Trail icon">
         <rect width="108" height="108" fill="#1EB8AC"/><circle cx="54" cy="54" r="46" fill="#2CC4B7"/>
         <g transform="translate(16.2 16.2) scale(0.7)" fill="none">
@@ -74,27 +73,32 @@
     </div>
   </header>
 
-  <main class="wrap">
-    <section>
+  <main>
+    <section class="wrap">
       <h2>What is My Book Trail?</h2>
       <p><strong>My Book Trail</strong> is a personal reading tracker for Android. It gives readers a private, beautifully organised place to catalogue every book they've read, are currently reading, or want to read next — with covers, star ratings, notes, custom shelves, reading statistics, and yearly reading goals. You can add books in seconds by searching Google Books, scanning a barcode, or snapping the cover with your camera. Your library is stored on your own device and, if you choose, privately backed up to your own Google Drive account.</p>
     </section>
 
-    <section>
-      <h2>What you can do</h2>
-      <div class="features">
-        <div class="card"><h3>Organise your library</h3><p>Sort books into Read, Reading, and Wishlist, and group them with custom shelves and labels.</p></div>
-        <div class="card"><h3>Add books fast</h3><p>Search Google Books, scan an ISBN barcode, or snap the cover — details fill in automatically.</p></div>
-        <div class="card"><h3>Rich detail</h3><p>Ratings, page counts, series, genre, language, ISBN, price, and private notes for every book.</p></div>
-        <div class="card"><h3>Stats &amp; goals</h3><p>See books and pages read, average rating, and progress toward your yearly reading goal.</p></div>
-        <div class="card"><h3>Make it yours</h3><p>Four colour themes in light or dark mode, and multi-currency support for prices.</p></div>
-        <div class="card"><h3>Yours, everywhere</h3><p>Private Google Drive backup and sync, plus CSV/Excel export and import.</p></div>
+    <section class="wide">
+      <div class="wrap" style="padding:0;margin:0 0 20px">
+        <h2>Take a look inside</h2>
+        <p class="sub">A private, beautifully organised home for everything you read.</p>
+      </div>
+      <div class="shots">
+        <figure><img src="screens/01-your-library.png" loading="lazy" alt="Your library — every book you've read, reading, and wishing for" /></figure>
+        <figure><img src="screens/02-browse.png" loading="lazy" alt="Browse your book covers in a grid" /></figure>
+        <figure><img src="screens/03-every-title.png" loading="lazy" alt="Rich detail for every book you own" /></figure>
+        <figure><img src="screens/04-add-in-seconds.png" loading="lazy" alt="Add books by searching, scanning a barcode, or snapping the cover" /></figure>
+        <figure><img src="screens/05-insights-goals.png" loading="lazy" alt="Reading stats and yearly goals" /></figure>
+        <figure><img src="screens/06-organize.png" loading="lazy" alt="Organise with custom shelves" /></figure>
+        <figure><img src="screens/07-make-it-yours.png" loading="lazy" alt="Four themes, light or dark" /></figure>
+        <figure><img src="screens/08-safe-portable.png" loading="lazy" alt="Private Google Drive backup, export and import" /></figure>
       </div>
     </section>
 
-    <section>
+    <section class="wrap">
       <h2>Privacy &amp; data</h2>
-      <p>My Book Trail does not collect or store your personal data on any server operated by the developer. Your library stays on your device and, only if you enable sync, in your own Google Drive (in a private app folder). The app shows ads via Google AdMob and Meta Audience Network, which may collect device identifiers for advertising. Read the full policy below.</p>
+      <p>My Book Trail does not collect or store your personal data on any server operated by the developer. Your library stays on your device and, only if you enable sync, in your own Google Drive (in a private app folder). The app shows ads via Google AdMob and Meta Audience Network, which may collect device identifiers for advertising. Read the full policy for details.</p>
       <div class="links">
         <a class="btn primary" href="privacy-policy.html">Privacy Policy</a>
         <!-- Add your Play Store URL once the app is live: -->
