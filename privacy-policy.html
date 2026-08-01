@@ -1,0 +1,628 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — My Book Trail</title>
+<meta name="description" content="Privacy Policy for the My Book Trail mobile application.">
+<style>
+  :root {
+    --bg: #F6FAF2;
+    --card: #FDFEFB;
+    --text: #1B231A;
+    --muted: #4A5544;
+    --primary: #3B6B3F;
+    --on-primary: #F3F8EF;
+    --primary-container: #D2E4CB;
+    --on-primary-container: #16301A;
+    --accent: #8F4F31;
+    --accent-soft: #F4E1D5;
+    --border: #D3DECA;
+    --shadow: 0 1px 2px rgba(20,40,20,.05), 0 8px 28px -12px rgba(20,50,25,.18);
+    --radius: 16px;
+    --maxw: 1080px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0E140C;
+      --card: #161D13;
+      --text: #DFE6D7;
+      --muted: #AEBBA2;
+      --primary: #9FCB98;
+      --on-primary: #0F2812;
+      --primary-container: #294A2D;
+      --on-primary-container: #BBE0B3;
+      --accent: #E0A483;
+      --accent-soft: #3A2517;
+      --border: #313B2A;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 10px 30px -14px rgba(0,0,0,.55);
+    }
+  }
+  :root[data-theme="dark"] {
+      --bg: #0E140C;
+      --card: #161D13;
+      --text: #DFE6D7;
+      --muted: #AEBBA2;
+      --primary: #9FCB98;
+      --on-primary: #0F2812;
+      --primary-container: #294A2D;
+      --on-primary-container: #BBE0B3;
+      --accent: #E0A483;
+      --accent-soft: #3A2517;
+      --border: #313B2A;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 10px 30px -14px rgba(0,0,0,.55);
+  }
+  :root[data-theme="light"] {
+    --bg: #F6FAF2;
+    --card: #FDFEFB;
+    --text: #1B231A;
+    --muted: #4A5544;
+    --primary: #3B6B3F;
+    --on-primary: #F3F8EF;
+    --primary-container: #D2E4CB;
+    --on-primary-container: #16301A;
+    --accent: #8F4F31;
+    --accent-soft: #F4E1D5;
+    --border: #D3DECA;
+    --shadow: 0 1px 2px rgba(20,40,20,.05), 0 8px 28px -12px rgba(20,50,25,.18);
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background:
+      radial-gradient(1200px 500px at 100% -10%, color-mix(in srgb, var(--primary) 12%, transparent), transparent 60%),
+      var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  .serif {
+    font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, "Times New Roman", serif;
+  }
+
+  /* ---------- Hero ---------- */
+  header.hero {
+    background:
+      radial-gradient(900px 400px at 85% -40%, color-mix(in srgb, var(--accent) 40%, var(--primary)), transparent 70%),
+      linear-gradient(155deg, var(--primary), color-mix(in srgb, var(--primary) 72%, #000));
+    color: var(--on-primary);
+    padding: 56px 24px 92px;
+    position: relative;
+    overflow: hidden;
+  }
+  header.hero::after {
+    /* subtle "trail" line motif */
+    content: "";
+    position: absolute; inset: 0;
+    background-image: radial-gradient(circle, rgba(255,255,255,.14) 1.5px, transparent 1.6px);
+    background-size: 26px 26px;
+    -webkit-mask-image: linear-gradient(120deg, transparent 55%, #000 120%);
+            mask-image: linear-gradient(120deg, transparent 55%, #000 120%);
+    opacity: .5; pointer-events: none;
+  }
+  .hero-inner {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    position: relative; z-index: 1;
+    display: flex; align-items: center; gap: 22px; flex-wrap: wrap;
+  }
+  .app-icon {
+    width: 84px; height: 84px; border-radius: 21px;
+    box-shadow: 0 10px 30px -8px rgba(0,0,0,.5), inset 0 0 0 1px rgba(255,255,255,.25);
+    flex: 0 0 auto;
+  }
+  .hero-text h1 {
+    margin: 0;
+    font-size: clamp(1.9rem, 4.5vw, 2.9rem);
+    letter-spacing: -.01em;
+    font-weight: 600;
+  }
+  .hero-text .kicker {
+    margin: 0 0 6px;
+    text-transform: uppercase;
+    letter-spacing: .18em;
+    font-size: .72rem;
+    font-weight: 700;
+    opacity: .85;
+  }
+  .hero-text .sub {
+    margin: 8px 0 0;
+    font-size: 1.05rem;
+    opacity: .92;
+    max-width: 46ch;
+  }
+  .badges {
+    max-width: var(--maxw);
+    margin: 22px auto 0;
+    position: relative; z-index: 1;
+    display: flex; gap: 10px; flex-wrap: wrap;
+  }
+  .badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(255,255,255,.14);
+    border: 1px solid rgba(255,255,255,.28);
+    color: var(--on-primary);
+    padding: 7px 13px; border-radius: 999px;
+    font-size: .84rem; font-weight: 500;
+    backdrop-filter: blur(4px);
+  }
+  .badge svg { width: 15px; height: 15px; }
+
+  /* ---------- Layout ---------- */
+  .wrap {
+    max-width: var(--maxw);
+    margin: -56px auto 0;
+    padding: 0 24px 64px;
+    position: relative; z-index: 2;
+    display: grid;
+    grid-template-columns: 244px minmax(0, 1fr);
+    gap: 28px;
+    align-items: start;
+  }
+
+  /* ---------- TOC ---------- */
+  nav.toc {
+    position: sticky; top: 20px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 18px 16px;
+    box-shadow: var(--shadow);
+  }
+  nav.toc h2 {
+    margin: 4px 8px 12px;
+    font-size: .74rem; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--muted); font-weight: 700;
+  }
+  nav.toc ol { list-style: none; margin: 0; padding: 0; counter-reset: t; }
+  nav.toc li { counter-increment: t; }
+  nav.toc a {
+    display: flex; gap: 10px; align-items: baseline;
+    padding: 7px 10px; border-radius: 9px;
+    color: var(--muted); text-decoration: none;
+    font-size: .9rem; line-height: 1.35;
+    transition: background .15s, color .15s;
+  }
+  nav.toc a::before {
+    content: counter(t, decimal-leading-zero);
+    font-variant-numeric: tabular-nums;
+    font-size: .72rem; font-weight: 700;
+    color: var(--primary);
+    opacity: .75; flex: 0 0 auto;
+  }
+  nav.toc a:hover { background: var(--primary-container); color: var(--on-primary-container); }
+  nav.toc a.active {
+    background: var(--primary-container); color: var(--on-primary-container); font-weight: 600;
+  }
+  nav.toc a.active::before { opacity: 1; }
+
+  /* ---------- Content ---------- */
+  main {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 12px clamp(20px, 4vw, 44px) 40px;
+    min-width: 0;
+  }
+  .intro { color: var(--muted); font-size: 1.02rem; padding-top: 22px; }
+  .intro strong { color: var(--text); }
+
+  section.policy { scroll-margin-top: 20px; padding: 26px 0; border-top: 1px solid var(--border); }
+  section.policy:first-of-type { border-top: none; }
+  section.policy h2 {
+    display: flex; align-items: center; gap: 12px;
+    margin: 0 0 12px; font-size: 1.4rem; font-weight: 600; letter-spacing: -.01em;
+  }
+  section.policy h2 .num {
+    flex: 0 0 auto;
+    width: 30px; height: 30px; border-radius: 9px;
+    display: grid; place-items: center;
+    background: var(--primary-container); color: var(--on-primary-container);
+    font-size: .82rem; font-weight: 700; font-variant-numeric: tabular-nums;
+    font-family: system-ui, sans-serif;
+  }
+  section.policy h3 {
+    margin: 22px 0 8px; font-size: 1.02rem; font-weight: 700; color: var(--text);
+  }
+  section.policy p { margin: 0 0 12px; }
+  a.link { color: var(--accent); text-decoration: none; border-bottom: 1px solid color-mix(in srgb, var(--accent) 40%, transparent); }
+  a.link:hover { border-bottom-color: var(--accent); }
+
+  ul.clean { margin: 6px 0 14px; padding: 0; list-style: none; }
+  ul.clean li {
+    position: relative; padding: 6px 0 6px 26px; color: var(--muted);
+  }
+  ul.clean li strong { color: var(--text); }
+  ul.clean li::before {
+    content: ""; position: absolute; left: 4px; top: 15px;
+    width: 7px; height: 7px; border-radius: 2px;
+    background: var(--accent); transform: rotate(45deg);
+  }
+
+  /* callout */
+  .callout {
+    display: flex; gap: 14px;
+    background: linear-gradient(180deg, color-mix(in srgb, var(--primary-container) 55%, var(--card)), var(--card));
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--primary);
+    border-radius: 12px; padding: 16px 18px; margin: 14px 0;
+  }
+  .callout.accent { border-left-color: var(--accent); background: linear-gradient(180deg, color-mix(in srgb, var(--accent-soft) 65%, var(--card)), var(--card)); }
+  .callout .ico { flex: 0 0 auto; width: 22px; height: 22px; color: var(--primary); }
+  .callout.accent .ico { color: var(--accent); }
+  .callout p { margin: 0; }
+  .callout .ico svg { width: 22px; height: 22px; }
+
+  /* retention table */
+  .table-wrap { overflow-x: auto; margin: 8px 0 6px; border: 1px solid var(--border); border-radius: 12px; }
+  table { border-collapse: collapse; width: 100%; min-width: 520px; font-size: .94rem; }
+  thead th {
+    text-align: left; background: var(--primary-container); color: var(--on-primary-container);
+    padding: 12px 16px; font-weight: 700; font-size: .82rem; text-transform: uppercase; letter-spacing: .05em;
+  }
+  tbody td { padding: 13px 16px; border-top: 1px solid var(--border); vertical-align: top; color: var(--muted); }
+  tbody td:first-child { color: var(--text); font-weight: 600; }
+  tbody tr:nth-child(even) td { background: color-mix(in srgb, var(--primary-container) 22%, transparent); }
+
+  /* contact card */
+  .contact {
+    margin-top: 12px;
+    background: linear-gradient(135deg, var(--primary), color-mix(in srgb, var(--primary) 70%, #000));
+    color: var(--on-primary);
+    border-radius: 14px; padding: 24px 22px;
+    display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap;
+  }
+  .contact h3 { margin: 0 0 4px; color: var(--on-primary); font-size: 1.15rem; }
+  .contact p { margin: 0; opacity: .9; }
+  .contact a.btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--on-primary); color: var(--primary);
+    padding: 11px 18px; border-radius: 999px; text-decoration: none; font-weight: 700; font-size: .95rem;
+    white-space: nowrap;
+  }
+  .contact a.btn svg { width: 17px; height: 17px; }
+
+  /* footer */
+  footer {
+    max-width: var(--maxw); margin: 0 auto; padding: 8px 24px 56px;
+    color: var(--muted); font-size: .85rem;
+    display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+  }
+  footer a { color: var(--muted); }
+
+  .eff {
+    display: inline-block; margin: 16px 0 4px;
+    font-size: .82rem; color: var(--muted);
+  }
+
+  /* Theme toggle */
+  .theme-toggle {
+    position: absolute; top: 20px; right: 24px; z-index: 3;
+    background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.3);
+    color: var(--on-primary); border-radius: 999px; padding: 8px 14px;
+    font: inherit; font-size: .82rem; cursor: pointer; display: inline-flex; gap: 7px; align-items: center;
+    backdrop-filter: blur(4px);
+  }
+  .theme-toggle:hover { background: rgba(255,255,255,.26); }
+  .theme-toggle svg { width: 15px; height: 15px; }
+
+  @media (max-width: 860px) {
+    .wrap { grid-template-columns: 1fr; }
+    nav.toc { position: static; order: -1; }
+    nav.toc ol { columns: 2; column-gap: 8px; }
+    nav.toc li { break-inside: avoid; }
+  }
+  @media (max-width: 520px) {
+    header.hero { padding: 40px 20px 80px; }
+    nav.toc ol { columns: 1; }
+    .contact { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark theme">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v2M12 19v2M5 5l1.4 1.4M17.6 17.6L19 19M3 12h2M19 12h2M5 19l1.4-1.4M17.6 6.4L19 5"/><circle cx="12" cy="12" r="4"/></svg>
+    <span id="themeLabel">Theme</span>
+  </button>
+  <div class="hero-inner">
+    <img class="app-icon" src="data:image/png;base64,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" alt="My Book Trail app icon">
+    <div class="hero-text">
+      <p class="kicker">My Book Trail</p>
+      <h1 class="serif">Privacy Policy</h1>
+      <p class="sub">How the My Book Trail application collects, uses, and protects your information.</p>
+    </div>
+  </div>
+  <div class="badges">
+    <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> GDPR &amp; CCPA aware</span>
+    <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 2v4M16 2v4M3 10h18"/></svg> Effective 26 July 2026</span>
+    <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v12H5.2L4 17.2z"/></svg> crunchcodelabs@gmail.com</span>
+  </div>
+</header>
+
+<div class="wrap">
+  <nav class="toc" aria-label="Table of contents">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#collection">Information Collection &amp; Use</a></li>
+      <li><a href="#cookies">Cookies &amp; Tracking</a></li>
+      <li><a href="#rights">Your Rights</a></li>
+      <li><a href="#ccpa">California Rights</a></li>
+      <li><a href="#third-party">Third-Party Access</a></li>
+      <li><a href="#transfers">International Transfers</a></li>
+      <li><a href="#optout">Opt-Out Rights</a></li>
+      <li><a href="#retention">Data Retention</a></li>
+      <li><a href="#children">Children</a></li>
+      <li><a href="#security">Security</a></li>
+      <li><a href="#breach">Data Breach Notification</a></li>
+      <li><a href="#changes">Changes</a></li>
+      <li><a href="#consent">Your Consent</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ol>
+  </nav>
+
+  <main>
+    <p class="intro">
+      This privacy policy applies to the <strong>My Book Trail</strong> app for mobile devices, together with any
+      related services operated by <strong>Anjana Senanayake</strong> (collectively, the &ldquo;Application&rdquo;).
+      Anjana Senanayake is hereby referred to as the &ldquo;Service Provider&rdquo;.
+    </p>
+    <span class="eff">Effective date: 26 July 2026</span>
+
+    <section class="policy" id="collection">
+      <h2><span class="num">01</span> Information Collection and Use</h2>
+      <p>The Application collects information when you download and use it. This information may include:</p>
+      <ul class="clean">
+        <li>Your device&rsquo;s Internet Protocol (IP) address</li>
+        <li>The pages of the Application you visit, the time and date of your visit, and the time spent on those pages</li>
+        <li>The total time spent on the Application</li>
+        <li>The mobile operating system you use</li>
+      </ul>
+      <p>
+        For a better experience while using the Application, the Service Provider may require you to provide certain
+        personally identifiable information. The information requested will be retained and used as described in this
+        privacy policy. The Service Provider may use the information you provide to send important information,
+        required notices, and, where permitted by law, marketing communications.
+      </p>
+    </section>
+
+    <section class="policy" id="cookies">
+      <h2><span class="num">02</span> Cookies and Tracking Technologies</h2>
+      <p>
+        The Application or its third-party SDKs may use cookies, SDKs, pixels, and similar technologies to support
+        functionality, analytics, or service delivery. Where required by applicable law, the Service Provider will
+        obtain consent before using non-essential tracking technologies.
+      </p>
+    </section>
+
+    <section class="policy" id="rights">
+      <h2><span class="num">03</span> Your Rights</h2>
+      <p>
+        You may request access to, correction of, or deletion of your personal data held by the Service Provider.
+        To exercise these rights, or to withdraw consent where processing is based on consent, contact the Service
+        Provider at <a class="link" href="mailto:crunchcodelabs@gmail.com">crunchcodelabs@gmail.com</a>.
+      </p>
+    </section>
+
+    <section class="policy" id="ccpa">
+      <h2><span class="num">04</span> Your California Privacy Rights (CCPA / CPRA)</h2>
+      <p>If you are a California resident, you have the right to:</p>
+      <ul class="clean">
+        <li>Know what personal information is collected</li>
+        <li>Delete personal information</li>
+        <li>Opt out of the sale or sharing of personal information</li>
+        <li>Non-discrimination for exercising these rights</li>
+      </ul>
+      <p>
+        To exercise your CCPA/CPRA rights, contact the Service Provider at
+        <a class="link" href="mailto:crunchcodelabs@gmail.com">crunchcodelabs@gmail.com</a>.
+      </p>
+    </section>
+
+    <section class="policy" id="third-party">
+      <h2><span class="num">05</span> Third-Party Access</h2>
+      <p>
+        Only aggregated, anonymized data is periodically transmitted to external services to aid the Service Provider
+        in improving the Application and their service. The Service Provider may share your information with third
+        parties in the ways described in this privacy statement.
+      </p>
+      <p>Please note that the Application utilizes third-party services that have their own privacy policies about handling data:</p>
+      <ul class="clean">
+        <li><a class="link" href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">AdMob (Google)</a></li>
+      </ul>
+      <p>The Service Provider may disclose User-Provided and Automatically Collected Information:</p>
+      <ul class="clean">
+        <li>As required by law, such as to comply with a subpoena or similar legal process</li>
+        <li>When they believe in good faith that disclosure is necessary to protect their rights, protect your safety or the safety of others, investigate fraud, or respond to a government request</li>
+        <li>With trusted service providers who work on their behalf, do not have independent use of the disclosed information, and have agreed to adhere to the rules set forth in this privacy statement</li>
+      </ul>
+    </section>
+
+    <section class="policy" id="transfers">
+      <h2><span class="num">06</span> International Data Transfers</h2>
+      <p>
+        The Service Provider or its third-party service providers may transfer personal data to countries outside your
+        country of residence, including outside the European Economic Area (EEA). Where applicable law requires
+        safeguards for international transfers, the Service Provider will use appropriate mechanisms:
+      </p>
+      <ul class="clean">
+        <li>Standard Contractual Clauses (SCCs) approved by the European Commission</li>
+        <li>Adequacy decisions or other legally recognized transfer mechanisms</li>
+        <li>Your consent, where required and legally permitted</li>
+      </ul>
+      <p>
+        Data protection laws in other countries may differ from those in your jurisdiction. Where required by law, the
+        Service Provider will apply appropriate safeguards and obtain any consent required for the transfer.
+      </p>
+    </section>
+
+    <section class="policy" id="optout">
+      <h2><span class="num">07</span> Opt-Out Rights</h2>
+      <p>
+        You can stop further collection of information from your mobile device by uninstalling the Application.
+        Uninstalling will stop the Application from collecting data from your device, but it does not automatically
+        delete information that has already been transmitted to the Service Provider or to third parties.
+      </p>
+      <div class="callout accent">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4h8v2M6 6l1 14h10l1-14"/></svg></span>
+        <p>To request deletion of your personal data, to withdraw consent, or to exercise any of your rights, contact
+        the Service Provider at <a class="link" href="mailto:crunchcodelabs@gmail.com">crunchcodelabs@gmail.com</a>.</p>
+      </div>
+    </section>
+
+    <section class="policy" id="retention">
+      <h2><span class="num">08</span> Data Retention Policy</h2>
+      <p>The Service Provider retains personal data based on its necessity for the stated purposes:</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Data Category</th><th>Retention Period</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>User-Provided Data</td><td>Duration of your use of the Application plus 12 months thereafter, unless longer retention is required by law</td></tr>
+            <tr><td>Automatically Collected Data</td><td>Up to 24 months from collection, unless longer retention is required for legal compliance</td></tr>
+            <tr><td>Aggregated &amp; Anonymized Data</td><td>Retained indefinitely, as it no longer identifies you</td></tr>
+            <tr><td>Data for Legal Compliance</td><td>Retained as long as required by applicable law</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        You may request deletion of your personal data, subject to any legal obligation to retain it. If you want the
+        Service Provider to delete User-Provided Data submitted through the Application, please contact them at
+        <a class="link" href="mailto:crunchcodelabs@gmail.com">crunchcodelabs@gmail.com</a>. Please note that some
+        User-Provided Data may be required for the Application to function properly.
+      </p>
+    </section>
+
+    <section class="policy" id="children">
+      <h2><span class="num">09</span> Children</h2>
+      <p>
+        The Application is not intended for children under 16 years of age, or such higher age as required by
+        applicable law. The Service Provider does not knowingly solicit data from children or market the Application
+        to them. Where parental or guardian consent is required under applicable law, the Application is not intended
+        for use without that consent.
+      </p>
+      <p>
+        The Service Provider does not knowingly collect personally identifiable information from children under 16 in
+        violation of applicable law. If the Service Provider discovers that a child has provided personal information,
+        that information will be immediately deleted from their servers. If you are a parent or guardian and are aware
+        that your child has provided personal information, please contact the Service Provider at
+        <a class="link" href="mailto:crunchcodelabs@gmail.com">crunchcodelabs@gmail.com</a> so that they can take the
+        necessary actions.
+      </p>
+    </section>
+
+    <section class="policy" id="security">
+      <h2><span class="num">10</span> Security</h2>
+      <p>
+        The Service Provider is concerned about safeguarding the confidentiality of your information. The Service
+        Provider provides physical, electronic, and procedural safeguards to protect the information it processes and
+        maintains.
+      </p>
+    </section>
+
+    <section class="policy" id="breach">
+      <h2><span class="num">11</span> Data Breach Notification</h2>
+      <p>
+        If a data breach occurs that affects your personal data, the Service Provider will notify you in accordance
+        with applicable legal requirements, including, where required, providing information about the nature of the
+        breach and the steps being taken to address it.
+      </p>
+    </section>
+
+    <section class="policy" id="changes">
+      <h2><span class="num">12</span> Changes to This Policy</h2>
+      <p>
+        The Service Provider may update this Privacy Policy from time to time, and will notify you of material changes
+        by posting the updated Privacy Policy with an effective date. Where required by law, the Service Provider will
+        seek your consent to material changes before they take effect. Previous versions will be maintained and made
+        available upon request by contacting
+        <a class="link" href="mailto:crunchcodelabs@gmail.com">crunchcodelabs@gmail.com</a>.
+      </p>
+    </section>
+
+    <section class="policy" id="consent">
+      <h2><span class="num">13</span> Your Consent</h2>
+      <p>
+        Where processing is based on consent, you provide that consent by affirmatively opting in to the relevant
+        feature or action. You may withdraw consent at any time without affecting processing carried out before
+        withdrawal. Processing based on other lawful bases is carried out as described above.
+      </p>
+    </section>
+
+    <section class="policy" id="contact">
+      <h2><span class="num">14</span> Contact Us</h2>
+      <p>
+        If you have any questions regarding privacy while using the Application, or about these practices, please
+        contact the Service Provider by email.
+      </p>
+      <div class="contact">
+        <div>
+          <h3>Anjana Senanayake &middot; Service Provider</h3>
+          <p>We typically respond to privacy requests as required by law.</p>
+        </div>
+        <a class="btn" href="mailto:crunchcodelabs@gmail.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          crunchcodelabs@gmail.com
+        </a>
+      </div>
+    </section>
+  </main>
+</div>
+
+<footer>
+  <span>&copy; 2026 Anjana Senanayake &middot; My Book Trail</span>
+  <span>Privacy Policy &middot; Effective 26 July 2026</span>
+</footer>
+
+<script>
+  // Theme toggle (persists in-session only; respects OS default otherwise)
+  (function () {
+    var root = document.documentElement;
+    var btn = document.getElementById('themeToggle');
+    var label = document.getElementById('themeLabel');
+    function apply(mode) {
+      if (mode === 'light' || mode === 'dark') { root.setAttribute('data-theme', mode); }
+      else { root.removeAttribute('data-theme'); }
+      var isDark = mode === 'dark' || (mode !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      label.textContent = isDark ? 'Light' : 'Dark';
+    }
+    var stored = null;
+    try { stored = sessionStorage.getItem('mbt-theme'); } catch (e) {}
+    apply(stored || 'auto');
+    btn.addEventListener('click', function () {
+      var isDark = root.getAttribute('data-theme') === 'dark' ||
+        (!root.getAttribute('data-theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      var next = isDark ? 'light' : 'dark';
+      apply(next);
+      try { sessionStorage.setItem('mbt-theme', next); } catch (e) {}
+    });
+  })();
+
+  // Scroll-spy for the table of contents
+  (function () {
+    var links = Array.prototype.slice.call(document.querySelectorAll('nav.toc a'));
+    var map = {};
+    links.forEach(function (a) { map[a.getAttribute('href').slice(1)] = a; });
+    var sections = Array.prototype.slice.call(document.querySelectorAll('section.policy'));
+    if (!('IntersectionObserver' in window)) return;
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) {
+          links.forEach(function (l) { l.classList.remove('active'); });
+          var active = map[en.target.id];
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-15% 0px -70% 0px', threshold: 0 });
+    sections.forEach(function (s) { obs.observe(s); });
+  })();
+</script>
+</body>
+</html>
